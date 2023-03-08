@@ -106,20 +106,16 @@ void solve()
     // cout << x1 << " " << y1 << ln << x2 << " " << y2 << ln;
     int min_moves = INT_MAX;
     vv32 visited(8, v32(8, 0));
-    if(x1==x2&&y1==y2){
-        cout<<0<<ln;
-        return;
-    }
     bfs(visited, x1, y1, x2, y2, min_moves);
     cout << min_moves << ln;
     // cout << "--------------" << ln;
 }
 int main()
 {
-// #ifndef ONLINE_JUDGE
-//     freopen("input.txt", "r", stdin);
-//     freopen("output.txt", "w", stdout);
-// #endif
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
     IOS;
     ll t;
     cin >> t;
